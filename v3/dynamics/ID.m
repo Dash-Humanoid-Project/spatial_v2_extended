@@ -29,13 +29,13 @@ for i = 1:model.NB
   [Xup{i}, S{i}, Sd{i}, v{i}] = model.joint{i}.kinematics(model.Xtree{i}, q{i}, qd{i}, vp);
 
   a{i} = Xup{i}*ap + Sd{i}*qd{i} + S{i}*qdd{i};
-  if ismember(i,[3,4,6,7])
-      % TODO (@nicholasadr): temporary hack for TelloDifferential until we
-      %                      can pass spanning tree position and minimal
-      %                      coord vel into joint.kinematics()
-      y_dot = model.joint{i}.get_minimal_coordinate_velocity(q{i},qd{i});
-      a{i} = Xup{i}*ap + Sd{i}*y_dot + S{i}*qdd{i};
-  end
+  %if ismember(i,[3,4,6,7])
+  %    % TODO (@nicholasadr): temporary hack for TelloDifferential until we
+  %    %                      can pass spanning tree position and minimal
+  %    %                      coord vel into joint.kinematics()
+  %    y_dot = model.joint{i}.get_minimal_coordinate_velocity(q{i},qd{i});
+  %    a{i} = Xup{i}*ap + Sd{i}*y_dot + S{i}*qdd{i};
+  %end
   h{i} = model.I{i}*v{i};
   f{i} = model.I{i}*a{i} + crf(v{i})*h{i};
 end
