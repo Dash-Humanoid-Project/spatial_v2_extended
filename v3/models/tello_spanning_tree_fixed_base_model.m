@@ -1,4 +1,4 @@
-function model = tello_spanning_tree_model(gravity)
+function model = tello_spanning_tree_fixed_base_model(gravity)
 
 import casadi.*
 
