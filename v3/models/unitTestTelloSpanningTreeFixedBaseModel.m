@@ -31,16 +31,16 @@ gear_ratio = 6;
 model_sym = tello_spanning_tree_fixed_base_model(g);
 
 %% Define y (minimal coordinate)
-y(1) = q(2); % y2
-y(2) = q(3) / gear_ratio; % y3
-y(3) = q(4) / gear_ratio; % y4
-y(4) = q(7) / gear_ratio; % y7
-y(5) = q(8) / gear_ratio; % y8
-y(6) = q(12); % y12
-y(7) = q(13) / gear_ratio; % y13
-y(8) = q(14) / gear_ratio; % y14
-y(9) = q(17) / gear_ratio; % y17
-y(10) = q(18) / gear_ratio; % y18
+y(1) = q(2); % y1
+y(2) = q(3) / gear_ratio; % y2
+y(3) = q(4) / gear_ratio; % y3
+y(4) = q(7) / gear_ratio; % y4
+y(5) = q(8) / gear_ratio; % y5
+y(6) = q(12); % y6
+y(7) = q(13) / gear_ratio; % y7
+y(8) = q(14) / gear_ratio; % y8
+y(9) = q(17) / gear_ratio; % y9
+y(10) = q(18) / gear_ratio; % y10
 
 %% Get implicit position constraints (phi)
 

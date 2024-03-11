@@ -37,16 +37,16 @@ gear_ratio = 6;
 model_sym = tello_spanning_tree_floating_base_model(g);
 
 %% Define y (minimal coordinate)
-y(8) = q(9); % y2
-y(9) = q(10) / gear_ratio; % y3
-y(10) = q(11) / gear_ratio; % y4
-y(11) = q(14) / gear_ratio; % y7
-y(12) = q(15) / gear_ratio; % y8
-y(13) = q(19); % y12
-y(14) = q(20) / gear_ratio; % y13
-y(15) = q(21) / gear_ratio; % y14
-y(16) = q(24) / gear_ratio; % y17
-y(17) = q(25) / gear_ratio; % y18
+y(8) = q(9); % y8
+y(9) = q(10) / gear_ratio; % y9
+y(10) = q(11) / gear_ratio; % y10
+y(11) = q(14) / gear_ratio; % y11
+y(12) = q(15) / gear_ratio; % y12
+y(13) = q(19); % y13
+y(14) = q(20) / gear_ratio; % y14
+y(15) = q(21) / gear_ratio; % y15
+y(16) = q(24) / gear_ratio; % y16
+y(17) = q(25) / gear_ratio; % y17
 
 %% Get implicit position constraints (phi)
 
@@ -76,7 +76,7 @@ G(23:26,15:16) = G_kad2;
 % - ql is the "dependent" coordinate of the spanning tree coordinate
 % - qr is the pre-gearbox rotor angle
 % - ql is the joint angle.
-% For example, in the first hip differential, q = [q3, q4, q5, q6];
+% For example, in the first hip differential, q = [q10, q11, q12, q13];
 % * Minimal coordinate (y) of hip differential and knee-ankle differential
 % refers to the post-gearbox rotor output angle
 
